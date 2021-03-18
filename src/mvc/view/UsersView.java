@@ -1,10 +1,10 @@
-package view;
+package mvc.view;
 
-import bean.User;
-import controller.Controller;
-import model.ModelData;
+import mvc.controller.Controller;
+import mvc.model.ModelData;
+import mvc.bean.User;
 
-public class UsersView implements View{ //Отображает список пользователей на экран
+public class UsersView implements View { //Отображает список пользователей на экран
     private Controller controller;
 
     @Override

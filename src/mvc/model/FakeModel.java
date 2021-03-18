@@ -1,6 +1,6 @@
-package model;
+package mvc.model;
 
-import bean.User;
+import mvc.bean.User;
 
 import java.util.ArrayList;
 import java.util.Arrays;

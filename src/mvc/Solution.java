@@ -1,7 +1,9 @@
-import controller.Controller;
-import model.FakeModel;
-import model.Model;
-import view.UsersView;
+package mvc;
+
+import mvc.controller.Controller;
+import mvc.model.FakeModel;
+import mvc.model.Model;
+import mvc.view.UsersView;
 
 public class Solution {
     public static void main(String[] args) {

@@ -1,7 +1,7 @@
-package view;
+package mvc.view;
 
-import controller.Controller;
-import model.ModelData;
+import mvc.controller.Controller;
+import mvc.model.ModelData;
 
 public interface View {
     void refresh(ModelData modelData); //обновить данные

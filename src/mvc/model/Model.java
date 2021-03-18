@@ -1,4 +1,4 @@
-package model;
+package mvc.model;
 
 public interface Model {
     ModelData getModelData(); //возможность получать данные для отображения

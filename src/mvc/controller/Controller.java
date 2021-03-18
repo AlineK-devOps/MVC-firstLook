@@ -1,7 +1,7 @@
-package controller;
+package mvc.controller;
 
-import model.Model;
-import view.UsersView;
+import mvc.model.Model;
+import mvc.view.UsersView;
 
 public class Controller { //получает запросы от клиента и оповещает модель
     private Model model;
