@@ -24,4 +24,8 @@ public class UsersView implements View { //Отображает список п�
     public void fireEventShowAllUsers(){ //эмулирует событие клиента
         controller.onShowAllUsers();
     }
+
+    public void fireEventShowDeletedUsers(){
+        controller.onShowAllDeletedUsers();
+    }
 }
