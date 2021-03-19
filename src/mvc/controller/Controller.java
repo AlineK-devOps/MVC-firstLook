@@ -33,6 +33,11 @@ public class Controller { //получает запросы от клиента 
         usersView.refresh(model.getModelData());
     }
 
+    public void onUserChange(String name, long id, int level){
+        model.changeUserData(name, id, level);
+        usersView.refresh(model.getModelData());
+    }
+
     public void setUsersView(UsersView usersView) {
         this.usersView = usersView;
     }

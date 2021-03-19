@@ -36,6 +36,11 @@ public class MainModel implements Model { //основная модель
         loadUsers();
     }
 
+    public void changeUserData(String name, long id, int level){
+        userService.createOrUpdateUser(name, id, level);
+        loadUsers();
+    }
+
     private List<User> getAllUsers(){
         return userService.filterOnlyActiveUsers(userService.getUsersBetweenLevels(1, 100));
     }
