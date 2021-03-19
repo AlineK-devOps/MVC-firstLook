@@ -23,6 +23,11 @@ public class Controller { //получает запросы от клиента 
         usersView.refresh(model.getModelData());
     }
 
+    public void onOpenUserEditForm(long id){
+        model.loadUserById(id);
+        editUserView.refresh(model.getModelData());
+    }
+
     public void setUsersView(UsersView usersView) {
         this.usersView = usersView;
     }

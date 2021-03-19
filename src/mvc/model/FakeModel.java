@@ -26,4 +26,9 @@ public class FakeModel implements Model{ //модель для тестиров�
     public void loadDeletedUsers() {
         throw new UnsupportedOperationException();
     }
+
+    @Override
+    public void loadUserById(long id) {
+        throw new UnsupportedOperationException();
+    }
 }

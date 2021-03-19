@@ -1,5 +1,6 @@
 package mvc.model;
 
+import mvc.bean.User;
 import mvc.model.service.UserService;
 import mvc.model.service.UserServiceImpl;
 
@@ -21,5 +22,10 @@ public class MainModel implements Model { //основная модель
     public void loadDeletedUsers(){
         modelData.setDisplayDeletedUserList(true);
         modelData.setUsers(userService.getAllDeletedUsers());
+    }
+
+    public void loadUserById(long id){
+        User user = userService.getUsersById(id);
+        modelData.setActiveUser(user);
     }
 }
