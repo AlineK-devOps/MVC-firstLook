@@ -1,11 +1,13 @@
 package mvc.controller;
 
 import mvc.model.Model;
+import mvc.view.EditUserView;
 import mvc.view.UsersView;
 
 public class Controller { //получает запросы от клиента и оповещает модель
     private Model model;
     private UsersView usersView;
+    private EditUserView editUserView;
 
     public void setModel(Model model) {
         this.model = model;
@@ -23,5 +25,9 @@ public class Controller { //получает запросы от клиента 
 
     public void setUsersView(UsersView usersView) {
         this.usersView = usersView;
+    }
+
+    public void setEditUserView(EditUserView editUserView) {
+        this.editUserView = editUserView;
     }
 }

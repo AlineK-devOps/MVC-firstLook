@@ -14,10 +14,12 @@ public class MainModel implements Model { //основная модель
 
     @Override
     public void loadUsers() {
+        modelData.setDisplayDeletedUserList(false);
         modelData.setUsers(userService.getUsersBetweenLevels(1, 100));
     }
 
     public void loadDeletedUsers(){
+        modelData.setDisplayDeletedUserList(true);
         modelData.setUsers(userService.getAllDeletedUsers());
     }
 }
