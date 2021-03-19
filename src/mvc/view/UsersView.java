@@ -12,7 +12,7 @@ public class UsersView implements View { //Отображает список п�
         String listName = modelData.isDisplayDeletedUserList()? "All deleted users:" : "All users:";
         System.out.println(listName);
         for (User user : modelData.getUsers()){
-            System.out.println("\t" + user.toString());
+            System.out.println("\t" + user);
         }
         System.out.println("===================================================");
     }

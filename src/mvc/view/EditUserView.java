@@ -13,6 +13,10 @@ public class EditUserView implements View{ //отображает конкрет
         System.out.println("===================================================");
     }
 
+    public void fireEventUserDeleted(long id){
+        controller.onUserDelete(id);
+    }
+
     @Override
     public void setController(Controller controller) {
         this.controller = controller;

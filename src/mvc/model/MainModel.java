@@ -4,6 +4,8 @@ import mvc.bean.User;
 import mvc.model.service.UserService;
 import mvc.model.service.UserServiceImpl;
 
+import java.util.List;
+
 public class MainModel implements Model { //основная модель
     private UserService userService = new UserServiceImpl();
     private ModelData modelData = new ModelData();
@@ -16,7 +18,7 @@ public class MainModel implements Model { //основная модель
     @Override
     public void loadUsers() {
         modelData.setDisplayDeletedUserList(false);
-        modelData.setUsers(userService.getUsersBetweenLevels(1, 100));
+        modelData.setUsers(getAllUsers());
     }
 
     public void loadDeletedUsers(){
@@ -27,5 +29,14 @@ public class MainModel implements Model { //основная модель
     public void loadUserById(long id){
         User user = userService.getUsersById(id);
         modelData.setActiveUser(user);
+    }
+
+    public void deleteUserById(long id){
+        userService.deleteUser(id);
+        loadUsers();
+    }
+
+    private List<User> getAllUsers(){
+        return userService.filterOnlyActiveUsers(userService.getUsersBetweenLevels(1, 100));
     }
 }
